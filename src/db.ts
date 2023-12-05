@@ -1,7 +1,7 @@
 import { Client } from "pg"
 require("dotenv").config()
 
-const connection = new Client({
+export const connection = new Client({
   host: "localhost",
   port: 5432,
   database: "authtest",
@@ -39,7 +39,5 @@ const db = async () => {
     console.log(`Erro ao conectar no banco! Erro: ${error}`)
   }
 }
-
-
 
 export default db
